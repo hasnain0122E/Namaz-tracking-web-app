@@ -1,0 +1,174 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #e6f2f2, #fefefe);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Logout Bar Styling (Right Panel) */
+.logout-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-color: #141e1f;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.image-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Form Container (Left Panel) */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 500px);
+  height: 100%;
+  padding: 20px;
+  z-index: 2;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.form-container form,
+.form-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #1abc9c;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #16a085;
+}
+
+.link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: 500;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive Styling ---------- */
+
+@media screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
+
+  .logout-bar {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 0;
+  }
+
+  .image-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-container {
+    padding: 25px 15px;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 13px;
+    padding: 10px;
+  }
+}

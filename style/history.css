@@ -1,0 +1,461 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  font-family: Inter;
+}
+
+.My-Salah-Timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  width: 550px;
+  height: 270px;
+}
+
+.heading-image img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+}
+.heading-box {
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-box h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(14, 150, 104);
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.dashboard {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 125px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 44px;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.dashboard img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.history {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 205px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.history img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.settings {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 275px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.settings img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.menu .dashboard img,
+.menu .history img,
+.menu .settings img {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.menu .active img {
+  opacity: 1 !important;
+}
+
+.logout-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #141e1f;
+  width: 500px;
+  height: 100%;
+}
+
+.image-icon {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.logout-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #12373b;
+  width: 500px;
+  height: 81px;
+}
+
+.log-out {
+  font-size: 24px;
+  color: white;
+}
+
+.logout-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+
+.prayers {
+  position: absolute;
+  top: 310px;
+  left: 100px;
+  width: 890px;
+  height: 454px;
+}
+
+.main-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8d9595;
+  margin-bottom: 10px;
+}
+
+.background-parent {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 423px;
+}
+
+.Check-Namaz-heading {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-family: Inter;
+  color: #8d9595;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.prayer-1 {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff;
+  width: 100%;
+  height: 62px;
+}
+
+.mosque-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.fajar-prayer {
+  font-size: 20px;
+  font-weight: 600;
+  color: #637374;
+}
+
+.prayer-box-left,
+.prayer-box-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.done,
+.missed {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s ease-in-out;
+}
+
+.toggle-btn.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+.calendar-container {
+    position: absolute;
+    top: 30px;
+    right: 550px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  width: 300px;
+  height: auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.month-year {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.calendar-nav button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day-label {
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
+
+.day {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: #4e4883;
+  color: white;
+  transform: scale(1.05);
+}
+
+
+/* ===== Mobile Responsive Styles (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  body {/* top for sticky menu, bottom for logout */
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* Sticky TOP menu - Mobile */
+  .menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .logo, 
+  .dashboard,
+  .history,
+  .settings {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .logo img,
+  .dashboard img,
+  .history img,
+  .settings img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+
+  /* Sticky BOTTOM logout bar - Mobile */
+  .logout-bar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #09292f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .image-icon {
+    display: none;
+  }
+
+  .logout-child {
+    width: 100%;
+  }
+
+  /* Content adjustments */
+  .My-Salah-Timeline,
+  .prayers,
+  .personal-box,
+  .calendar-container {
+    position: relative;
+    width: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    margin: 20px;
+    height: auto;
+  }
+
+  .heading-box h1 {
+    font-size: 24px;
+  }
+
+  .fajar-prayer {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1199px) {
+  .prayers {
+    width: calc(100% - 420px); /* Account for logout bar */
+    max-width: 800px;
+    z-index: 100;
+  }
+
+  .logout-bar{  
+   width: 300px;
+   height: 100%;
+  }
+
+.image-icon {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.logout-child {
+  width: auto;
+  height: 81px;
+}
+
+.log-out {
+  font-size: 24px;
+  color: white;
+}
+
+.logout-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+
+.calendar-container {
+  right: 320px;
+}
+
+.My-Salah-Timeline{
+      width: calc(100% - 750px);
+}
+}

@@ -1,0 +1,755 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  font-family: Inter;
+}
+
+h1 {
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #313e40;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.dashboard {
+  position: absolute;
+  top: 44px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.dashboard img {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.history {
+  position: absolute;
+  top: 125px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.history img {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.settings {
+  position: absolute;
+  top: 205px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.settings img {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.Personal-Info {
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  width: 706px;
+  font-size: 16px;
+}
+
+.personal-head p {
+  font-weight: 600;
+  font-size: 16px;
+  position: absolute;
+  left: 100px;
+  top: 120px;
+  border-radius: 10px;
+}
+
+.personal-box {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  border-radius: 10px;
+  background-color: rgba(252, 253, 253);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  width: 1000px;
+  height: 85px;
+}
+
+.username {
+  font-weight: bold;
+  display: flex;
+  justify-content:left;
+  gap: 10px;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.user-image img{
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+  object-fit:contain;
+}
+
+.date-time {
+  gap: 10px;
+  font-size: 14.8px;
+  display: flex;
+  font-weight: 700;
+  color: #788283;
+  align-items: center;
+  width: 153px;
+  height: 17px;
+}
+
+.logout-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #141e1f;
+  width: 500px;
+  height: 100%;
+}
+
+.image-icon {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.logout-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #12373b;
+  width: 500px;
+  height: 81px;
+}
+
+.log-out {
+  font-size: 24px;
+  color: white;
+}
+
+.logout-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+
+.prayers {
+  position: absolute;
+  top: 267px;
+  left: 100px;
+  width: 890px;
+  height: 454px;
+}
+
+.main-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8d9595;
+  margin-bottom: 10px;
+}
+
+.background-parent {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 423px;
+}
+
+.Check-Namaz-heading {
+   margin-bottom: 10px; 
+  font-size: 12px;
+  font-family: Inter;
+  color: #8d9595;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.prayer-1 {
+
+padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff;
+  width: 100%;
+  height: 62px;
+}
+
+.mosque-icon {
+width: 30px;
+height: 30px;
+object-fit: cover;
+}
+
+.fajar-prayer {
+font-size: 20px;
+font-weight: 600;
+color: #637374;
+}
+
+.prayer-box-left, .prayer-box-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.done, .missed {
+  cursor: pointer;
+    align-items: center;
+    display: flex;  
+    gap: 10px;
+}
+
+
+.toggle-btn {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.2s ease-in-out;
+}
+
+.toggle-btn.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  font-family: Inter;
+}
+
+h1 {
+  position: absolute;
+  left: 100px;
+  top: 70px;
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(14, 150, 104);
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 80px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.dashboard {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 125px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 44px;
+  padding: 20px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.dashboard img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.history {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 205px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.history img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.settings {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 275px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+}
+
+.settings img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.menu .dashboard img,
+.menu .history img,
+.menu .settings img {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.menu .active img {
+  opacity: 1 !important;
+}
+
+.Personal-Info {
+  position: absolute;
+  top: 200px;
+  left: 80px;
+  width: 706px;
+  font-size: 16px;
+}
+
+.personal-head p {
+  font-weight: 600;
+  font-size: 16px;
+  position: absolute;
+  left: 100px;
+  top: 120px;
+  border-radius: 10px;
+}
+
+.personal-box {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  border-radius: 10px;
+  background-color: rgba(252, 253, 253);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px;
+  width: 1000px;
+  height: 85px;
+}
+
+.username {
+  font-weight: bold;
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  font-size: 16px;
+}
+
+.user-image img {
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+  object-fit: contain;
+}
+
+.date-time {
+  gap: 10px;
+  font-size: 14.8px;
+  display: flex;
+  font-weight: 700;
+  color: #788283;
+  align-items: center;
+  width: 153px;
+  height: 17px;
+}
+
+.logout-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #141e1f;
+  width: 500px;
+  height: 100%;
+}
+
+.image-icon {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.logout-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #12373b;
+  width: 500px;
+  height: 81px;
+}
+
+.log-out {
+  font-size: 24px;
+  color: white;
+}
+
+.logout-icon {
+  width: 23px;
+  height: 23px;
+  object-fit: cover;
+}
+
+.prayers {
+  position: absolute;
+  top: 267px;
+  left: 100px;
+  width: 890px;
+  height: 454px;
+}
+
+.main-info {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8d9595;
+  margin-bottom: 10px;
+}
+
+.background-parent {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  width: 100%;
+  height: 423px;
+}
+
+.Check-Namaz-heading {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-family: Inter;
+  color: #8d9595;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.prayer-1 {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: #fff;
+  width: 100%;
+  height: 62px;
+}
+
+.mosque-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.fajar-prayer {
+  font-size: 20px;
+  font-weight: 600;
+  color: #637374;
+}
+
+.prayer-box-left,
+.prayer-box-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.done,
+.missed {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s ease-in-out;
+}
+
+.toggle-btn.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ===== Mobile Responsive Styles ===== */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    min-height: 100vh; /* ensures the page takes full height */
+    margin: 0; /* top for sticky menu, bottom for logout */
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+
+  /* Sticky TOP menu */
+  .menu {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .logo {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .logo img {
+    position: static;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+  .dashboard,
+  .history,
+  .settings {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .dashboard img,
+  .history img,
+  .settings img {
+    position: static;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+  }
+
+  /* Sticky BOTTOM logout bar */
+  .logout-bar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #09292f; /* set a background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .image-icon {
+    display: none;
+  }
+
+  .logout-child {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  main,
+  .content,
+  .prayers {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Content adjustments */
+  .namaz-tracking-heading h1 {
+    position: static;
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .personal-head p {
+    position: static;
+    padding: 0 20px;
+  }
+
+  .personal-box {
+    position: relative;
+    width: calc(100% - 40px);
+    left: auto;
+    top: auto;
+    margin: 20px;
+  }
+
+  .prayers {
+    position: relative;
+    width: calc(100% - 40px);
+    left: auto;
+    top: auto;
+    margin: 20px;
+    height: auto;
+  }
+
+  .fajar-prayer {
+    font-size: 12px;
+    font-weight: 600;
+    color: #637374;
+  }
+}
+
+/* ===== Tablet/Medium Screen Styles ===== */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .prayers {
+    width: calc(100% - 520px); /* Account for logout bar */
+    max-width: 800px;
+    z-index: 100;
+  }
+
+  .personal-box {
+    width: calc(100% - 520px);
+    max-width: 800px;
+    z-index: 100;
+  }
+
+  .fajar-prayer {
+    font-size: 12px;
+    font-weight: 600;
+    color: #637374;
+  }
+
+  .logout-bar {
+    width: 400px;
+    height: 100%;
+  }
+
+  .image-icon {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .logout-child {
+    width: 400px;
+    height: 81px;
+  }
+}
+
+/* ===== Desktop Styles Remain Unchanged ===== */
+@media (min-width: 1200px) {
+  /* All original desktop styles remain exactly the same */
+}

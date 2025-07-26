@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="menu">
+            <div class="logo">
+                <img src="./assets/unnamed.png" alt="">
+            </div>
+            <div class="dashboard">
+                <img src="./assets/Layout.png" alt="">
+            </div>
+            <div class="history">
+                <img src="./assets/History.png" alt="">
+            </div>
+        </div>
+        <div class="namaz-tracking-heading">
+            <h1>NAMAZ TRACKING APP</h1>
+        </div>
+        <div class="personal-info">
+            <div class="personal-head">
+                <p>PERSONAL INFO</p>
+            </div>
+            <div class="personal-box">
+                <div class="username">
+                    <div class="user-image">
+                        <img src="./assets/Image.png" alt="User Icon" />
+                    </div>
+                    <div id="nameOfUser">
+                        <p>USERNAME</p>
+                    </div>
+                </div>
+                <div class="date-time">
+                    <img src="./assets/Back in time.png" alt="Clock Icon" />
+                    <p id="dateTime">22/07/2025 6:15PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="prayers">
+            <div class="main-info">TODAYS PRAYERS</div>
+            <div class="background-parent">
+                <div class="group-parent">
+                    <div class="Check-Namaz-heading">
+                        <div class="detail-order">Check Your Namaz Status</div>
+                    </div>
+                </div>
+                <div class="prayer-1 prayer-block" data-prayer="fajr">
+                    <div class="prayer-box-left">
+                        <img class="mosque-icon" alt="" src="./assets/Mosque.png">
+                        <div class="fajar-prayer">FAJAR PRAYER</div>
+                    </div>
+                    <div class="prayer-box-right">
+                        <div class="done toggle-btn">
+                            <div class="done1">DONE</div>
+                            <div>
+                                <img class="check-icon" alt="" src="./assets/Check.png">
+                            </div>
+                        </div>
+                        <div class="missed toggle-btn">
+                            <div class="missed1">MISSED</div>
+                            <img class="cancel-icon" alt="" src="./assets/Cancel.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-1 prayer-block" data-prayer="zuhr">
+                    <div class="prayer-box-left">
+                        <img class="mosque-icon" alt="" src="./assets/Mosque.png">
+                        <div class="fajar-prayer">ZUHR PRAYER</div>
+                    </div>
+                    <div class="prayer-box-right">
+                        <div class="done toggle-btn">
+                            <div class="done1">DONE</div>
+                            <img class="check-icon" alt="" src="./assets/Check.png">
+                        </div>
+                        <div class="missed toggle-btn">
+                            <div class="missed1">MISSED</div>
+                            <img class="cancel-icon" alt="" src="./assets/Cancel.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-1 prayer-block" data-prayer="Asar">
+                    <div class="prayer-box-left">
+                        <img class="mosque-icon" alt="" src="./assets/Mosque.png">
+                        <div class="fajar-prayer">ASAR PRAYER</div>
+                    </div>
+                    <div class="prayer-box-right">
+                        <div class="done toggle-btn">
+                            <div class="done1">DONE</div>
+                            <img class="check-icon" alt="" src="./assets/Check.png">
+                        </div>
+                        <div class="missed toggle-btn">
+                            <div class="missed1">MISSED</div>
+                            <img class="cancel-icon" alt="" src="./assets/Cancel.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-1 prayer-block" data-prayer="magrib">
+                    <div class="prayer-box-left">
+                        <img class="mosque-icon" alt="" src="./assets/Mosque.png">
+                        <div class="fajar-prayer">MAGRIB PRAYER</div>
+                    </div>
+                    <div class="prayer-box-right">
+                        <div class="done toggle-btn">
+                            <div class="done1">DONE</div>
+                            <img class="check-icon" alt="" src="./assets/Check.png">
+                        </div>
+                        <div class="missed toggle-btn">
+                            <div class="missed1">MISSED</div>
+                            <img class="cancel-icon" alt="" src="./assets/Cancel.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="prayer-1 prayer-block" data-prayer="Isha">
+                    <div class="prayer-box-left">
+                        <img class="mosque-icon" alt="" src="./assets/Mosque.png">
+                        <div class="fajar-prayer">ISHA PRAYER</div>
+                    </div>
+                    <div class="prayer-box-right">
+                        <div class="done toggle-btn">
+                            <div class="done1">DONE</div>
+                            <img class="check-icon" alt="" src="./assets/Check.png">
+                        </div>
+                        <div class="missed toggle-btn">
+                            <div class="missed1">MISSED</div>
+                            <img class="cancel-icon" alt="" src="./assets/Cancel.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logout-bar">
+        <img class="image-icon" alt="" src="./assets/image 1.png">
+        <button type="button" onclick="logout()" class="logout-child">
+            <b class="log-out">Log Out</b>
+            <img class="logout-icon" alt="" src="./assets/Logout.png">
+        </button>
+    </div>
+</body>
+<script src="./script/dashbaord.js" type="module"></script>
+
+</html>
