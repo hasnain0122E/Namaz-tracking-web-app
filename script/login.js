@@ -18,7 +18,7 @@ const loginhandler = async () => {
     );
     console.log("login response ", response.user.uid);
     localStorage.setItem("uid", response.user.uid);
-    window.location.replace("./dashboard.html");
+    window.location.replace("./index.html");
   } catch (error) {
     console.log("error", error.message);
   }

@@ -46,7 +46,7 @@ document.querySelectorAll(".menu").forEach((menu) => {
 
       // Navigate to respective pages
       if (btn.classList.contains("dashboard")) {
-        window.location.replace("./Dashboard.html");
+        window.location.replace("./index.html");
       } else if (btn.classList.contains("history")) {
         window.location.replace("./history.html");
       }
