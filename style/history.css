@@ -412,8 +412,21 @@ body {
   }
 
   .fajar-prayer {
-    font-size: 16px;
+    margin-right: 10px;
+    font-size: 12px;
   }
+
+    .done,
+  .missed {
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  .prayer-box-left,
+.prayer-box-right {
+  gap: 10px;
+
+}
 }
 
 

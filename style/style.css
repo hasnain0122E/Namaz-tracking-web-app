@@ -705,11 +705,22 @@ h1 {
     height: auto;
   }
 
-  .fajar-prayer {
+   .fajar-prayer {
+    margin-right: 10px;
     font-size: 12px;
-    font-weight: 600;
-    color: #637374;
   }
+
+    .done,
+  .missed {
+    gap: 5px;
+    font-size: 12px;
+  }
+
+  .prayer-box-left,
+.prayer-box-right {
+  gap: 10px;
+
+}
 }
 
 /* ===== Tablet/Medium Screen Styles ===== */
