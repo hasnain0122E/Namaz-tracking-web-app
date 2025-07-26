@@ -1,0 +1,2 @@
+# Namaz-tracking-web-app
+Namaz Tracking Web App The Namaz Tracking Web App is a user-friendly platform designed to help Muslims keep track of their daily prayers. With a clean interface and intuitive functionality, users can log each prayer as done or missed, view their prayer history, and stay consistent in their spiritual journey. The app promotes accountability, self-reflection, and spiritual growth by enabling users to monitor and improve their prayer habits over time. Whether you're at home, work, or on the go, this app ensures your Namaz routine stays on track.
